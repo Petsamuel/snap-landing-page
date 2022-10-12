@@ -4,150 +4,246 @@
     font-size: 11px;
     text-align: center;
 }
+
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-:root{
---Almost-White: hsl(0, 0%, 98%);
---Medium-Gray: hsl(0, 0%, 41%);
---Almost-Black: hsl(0, 0%, 8%);
---Font-size-paragraph: 18px;
---Family:"Epilogue", serif;
---Weights-light: 500;
---Weights-heavy: 700;
---brand-logo:url("./images/logo.svg");
---hero-image-mobile:url("./images/image-hero-mobile.png");
---hero-image-desktop:url("./images/image-hero-desktop.png") ;
---mobile-menu-icon:url("./images/icon-menu.svg");
---mobile-icon-close:url("./images/icon-close-menu.svg");
---client:url("./images/client-audiophile.svg");
---client2:url("./images/client-databiz.svg");
---client3:url("./images/client-maker.svg");
---client4:url("./images/client-meet.svg");
 
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+    --Font-size-paragraph: 18px;
+    --Family: "Epilogue", serif;
+    --Weights-light: 500;
+    --Weights-heavy: 700;
+    --brand-logo: url("./images/logo.svg");
+    --hero-image-mobile: url("./images/image-hero-mobile.png");
+    --hero-image-desktop: url("./images/image-hero-desktop.png");
+    --mobile-menu-icon: url("./images/icon-menu.svg");
+    --mobile-icon-close: url("./images/icon-close-menu.svg");
+    --client: url("./images/client-audiophile.svg");
+    --client2: url("./images/client-databiz.svg");
+    --client3: url("./images/client-maker.svg");
+    --client4: url("./images/client-meet.svg");
+    --icon-arrow-up: url("./images/icon-arrow-up.svg");
+    --icon-arrow-down: url("./images/icon-arrow-down.svg");
+    --todo: url("./images/icon-todo.svg");
+    --mobile-calender: url("./images/icon-calendar.svg");
+    --mobile-reminder: url("./images/icon-reminders.svg");
+    --mobile-planning: url("./images/icon-planning.svg");
 }
-body{
+.overlay{
+    background-color: rgba(0, 0, 0, 0.452);
+    position: absolute;
+    height: 100%;
+    width:90vw;
+    z-index: 1;
+    display:none;
+  
+}
+body {
     font-family: var(--Family);
+    z-index: 1;
+}
+i{
+    margin: 0px 15px;
+}
+li>a i{
+    font-weight: var(--Weights-light);
+    color:var(--Medium-Gray);
 }
 
-@media screen and (max-width:375px), (max-width:768px) {
-    nav{
-        display:flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .navitems{
+.icon-arrow-up {
+    content: var(--icon-arrow-up);
+}
+
+.icon-arrow-down {
+    content: var(--icon-arrow-down);
+}
+
+@media screen and (max-width:375px),
+(max-width:768px) {
+    nav {
         display: flex;
         justify-content: space-between;
-        margin:5%;
         width: 100%;
     }
-    .navlist{
-        display:none;
-        top:0px;
-        right:0px;
+
+    .navitems {
+        display: flex;
+        justify-content: space-between;
+        margin: 5%;
+        width: 100%;
+    }
+
+    .navlist {
+        display: none;
+        top: 0px;
+        right: 0px;
         position: absolute;
         background-color: var(--Almost-White);
         width: 150px;
-        height:100%;
-        padding:10%;
+        height: 100%;
+        padding: 10%;
+        z-index: 10;
     }
-    .list-content{
+
+    .list-content {
         margin-top: 3rem;
-        width:100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-left: -3em;
     }
-    li a{
-        width:100%;
+
+    li a {
+        width: 100%;
         text-align: left;
     }
-    li, a{
-        color:inherit;
+
+    li,
+    a {
+        color: inherit;
         text-decoration: none;
         list-style: none;
+        cursor: pointer;
     }
-    .list-content .list-item{
+
+    .list-content .list-item {
         padding-top: 1em;
     }
-    .mobile.action.btn{
+
+    .inner-list-content {
+        margin: 20px -1em;
+        display:none;
+
+    }
+    .inner-list-content-history {
+        margin: 20px -1em;
+        display:none;
+
+    }
+
+    .inner-list-content>li, .inner-list-content-history>li{
+        padding: 10px 0px;
+    }
+
+    .mobile.action.btn {
 
         width: 100%;
     }
+
     .login-btn {
-        margin: 1.5em ;
+        margin: 1.5em;
     }
+
     .register-btn {
-        margin: 1em ;
-        
+        margin: 1em;
+
     }
-    .brand{
-        content:var(--brand-logo);
+
+    .brand {
+        content: var(--brand-logo);
     }
-    .mobile-menu-close{
+
+    .mobile-menu-close {
         content: var(--mobile-icon-close);
     }
-    .mobile-menu-open{
-        content:var(--mobile-menu-icon);
-         z-index:10;
-     }
-    .container-menu-icon{
+
+    .mobile-menu-open {
+        content: var(--mobile-menu-icon);
         z-index: 10;
     }
-    main{
+
+    .container-menu-icon {
+        z-index: 10;
+    }
+
+    .todo-list {
+        content: var(--todo)
+    }
+
+    
+
+    .calendar {
+        content: var(--mobile-calender)
+    }
+
+    
+
+    .reminder {
+        content: var(--mobile-reminder)
+    }
+
+    
+
+    .planning {
+        content: var(--mobile-planning)
+    }
+
+    main {
         text-align: center;
         margin-top: 20px;
-        
+
     }
-    h1{
+
+    h1 {
         margin-top: 1em;
         font-weight: var(--Weights-heavy);
     }
-    .action-btn{
+
+    .action-btn {
         display: flex;
         justify-content: center;
     }
-    .action-btn a{
+
+    .action-btn a {
         background-color: var(--Almost-Black);
         color: var(--Almost-White);
         padding: 12px;
         border-radius: 10px;
         text-decoration: none;
-        
+
     }
-    .hero-banner{
-        content:var(--hero-image-mobile);
-        width:100%;
+
+    .hero-banner {
+        content: var(--hero-image-mobile);
+        width: 100%;
     }
-    .patners{
-        padding: 2em 0px ;
+
+    .patners {
+        padding: 2em 0px;
         display: grid;
         grid-template-columns: auto auto auto auto;
         align-items: center;
-      
-        
+
+
     }
-    .client{
-        content:var(--client);
-        width:100%;
-        margin:10px;
+
+    .client {
+        content: var(--client);
+        width: 100%;
+        margin: 10px;
     }
-    .client2{
-        content:var(--client2);
-        width:100%;
-        margin:5px;
+
+    .client2 {
+        content: var(--client2);
+        width: 100%;
+        margin: 5px;
     }
-    .client3{
-        content:var(--client3);
-        width:100%;
-        margin:5px;
+
+    .client3 {
+        content: var(--client3);
+        width: 100%;
+        margin: 5px;
     }
-    .client4{
-        content:var(--client4);
-        width:100%;
-        padding:5px;
+
+    .client4 {
+        content: var(--client4);
+        width: 100%;
+        padding: 5px;
     }
-    
+
 }

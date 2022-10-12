@@ -17,19 +17,50 @@
     <script src="scripts.js" defer></script>
   </head>
 
-  <body class="overlay">
-
+  <body>
+    <section class="overlay"></section>
     <header>
       <nav>
         <div class="navitems">
           <div class="brand"></div>
           <div class="navlist">
             <ul class="list-content">
-              <li class="list-item"><a href="">Features</a></li>
-              <li class="list-item"><a href="">Company</a></li>
+              <li class="list-item">
+                <a  id="feature"
+                  >Features <i class="icon-arrow-up" id="cadet"></i
+                ></a>
+                <ul class="inner-list-content">
+                  <li>
+                    <a href="#"><i class="todo-list"></i>Todo List</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="calendar"></i>Calendar</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="reminder"></i>Reminders</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="planning"></i>Planning</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-item">
+                <a id="history">Company<i class="icon-arrow-up" id="cadet"></i></a>
+                <ul class="inner-list-content-history">
+                  <li>
+                    <a ><i></i>History</a>
+                  </li>
+                  <li>
+                    <a href="#"><i></i>Our Team</a>
+                  </li>
+                  <li>
+                    <a href="#"><i></i>Blog</a>
+                  </li>
+                </ul>
+              </li>
               <li class="list-item"><a href="">Career</a></li>
               <li class="list-item"><a href="">About</a></li>
-              <div>
+              <div class="mobile-login-section">
                 <ul class="mobile-action-btn">
                   <li class="login-btn"><a href="">Login</a></li>
                   <li class="register-btn"><a href="">Register</a></li>
@@ -37,20 +68,17 @@
               </div>
             </ul>
           </div>
-          <div id="icon-container" class="container-menu-icon" >
-          <div id="iconMenu" class="mobile-menu-close mobile-menu-open  " >
-
-              
-            </div>
+          <div id="icon-container" class="container-menu-icon">
+            <div id="iconMenu" class="mobile-menu-close mobile-menu-open"></div>
           </div>
         </div>
       </nav>
     </header>
-
+    
     <main>
       <div class="hero-banner"></div>
       <div class="content-container">
-        <h1> Make remote work</h1>
+        <h1>Make remote work</h1>
         <p>
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
