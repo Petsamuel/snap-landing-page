@@ -8,7 +8,14 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 
+}
 :root {
     --Almost-White: hsl(0, 0%, 98%);
     --Medium-Gray: hsl(0, 0%, 41%);
@@ -16,7 +23,7 @@
     --Font-size-paragraph: 18px;
     --Family: "Epilogue", serif;
     --Weights-light: 500;
-    --Weights-heavy: 700;
+    --Weights-heavy: 900;
     --brand-logo: url("./images/logo.svg");
     --hero-image-mobile: url("./images/image-hero-mobile.png");
     --hero-image-desktop: url("./images/image-hero-desktop.png");
@@ -61,15 +68,178 @@ li>a i{
 .icon-arrow-down {
     content: var(--icon-arrow-down);
 }
+.navitems {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    padding:1em;
+}
+.navlist{
+    display:flex;
+    padding:0em 3em;
+    align-items: baseline;
+    width:100%;
+    justify-content:space-between
+}
+.mobile-action-btn{
+    display:flex;
+    /* place-content: end; */
+}
+.list-content {
+    margin-top: 1rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    /* margin-left: -3em; */
+}
+li a {
+    width: 100%;
+    text-align: left;
+    padding:0px 1em;
+}
+
+li,
+a {
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+.inner-list-content, .inner-list-content-history {
+    margin: 20px -1em;
+    display:none;
+    position:absolute;
+
+}
+.inner-list-content>li, .inner-list-content-history>li{
+    padding: 10px 0px;
+}
+.mobile-login-section{
+    text-align: center;
+    
+}
+.mobile-action-btn {
+    gap:1.5em;
+   margin-top:20px;
+   line-height: 50px;
+
+}
+
+.mobile-action-btn>.register-btn{
+    border:1px solid gray;
+    border-radius: 1rem;
+    position:relative;
+    padding: 0px 1.5em;
+}
+
+.brand {
+    content: var(--brand-logo);
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+    margin:0px 3em 0px 3em;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap:5em;
+}
+
+.content-container h1 {
+    margin-top: 6rem;
+    font-weight: var(--Weights-heavy);
+    text-align:justify;
+    
+}
+.content-container{
+    display:Flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    text-align:left;
+    width:50%;
+    line-height: 1.5em;
+    align-self:center
+    
+}
+.text-paragraph{
+    margin:3em 0em 1em 0em;
+}
+
+.action-btn {
+    display: flex;
+    margin-top:2rem;
+}
+
+.action-btn a {
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+
+.hero-banner {
+    content: var(--hero-image-mobile);
+    /* width: 70vw;
+    height:70vh; */
+}
+
+.partners {
+    padding: 2em 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin-top: 3em;
+    
+    
+
+}
+.partners>div{
+    width:80%;
+}
+.client {
+    content: var(--client);
+    width: 100%;
+    margin: 10px;
+}
+
+.client2 {
+    content: var(--client2);
+    width: 100%;
+    margin: 5px;
+}
+
+.client3 {
+    content: var(--client3);
+    width: 100%;
+    margin: 5px;
+}
+
+.client4 {
+    content: var(--client4);
+    width: 100%;
+    padding: 5px;
+}
+.icon-container{
+display:none;
+visibility:hidden;
+}
+
 
 @media screen and (max-width:375px),
 (max-width:768px) {
     nav {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        /* width: 100%; */
     }
-
+    .mobile-action-btn{
+        display:flex;
+        flex-direction: column;
+    }
     .navitems {
         display: flex;
         justify-content: space-between;
@@ -83,7 +253,7 @@ li>a i{
         right: 0px;
         position: absolute;
         background-color: var(--Almost-White);
-        width: 150px;
+        width: 70%;
         height: 100%;
         padding: 10%;
         z-index: 10;
@@ -95,7 +265,7 @@ li>a i{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: -3em;
+        margin-left: 1em;
     }
 
     li a {
@@ -112,38 +282,49 @@ li>a i{
     }
 
     .list-content .list-item {
-        padding-top: 1em;
-    }
+        padding: 1em;
 
-    .inner-list-content {
+    }
+    .content-container h1 {
+        margin: 1em 0em;
+        font-weight: var(--Weights-heavy);
+        text-align:center;
+        
+    }
+    
+    .inner-list-content ,.inner-list-content-history{
         margin: 20px -1em;
         display:none;
+        position:relative;
 
     }
-    .inner-list-content-history {
-        margin: 20px -1em;
-        display:none;
-
+    .content-container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        text-align:center;
+        width:100%;
     }
+    
 
     .inner-list-content>li, .inner-list-content-history>li{
         padding: 10px 0px;
     }
-
-    .mobile.action.btn {
-
-        width: 100%;
+    .mobile-login-section{
+        width:100%;
+        text-align: center;
     }
-
-    .login-btn {
-        margin: 1.5em;
-    }
-
-    .register-btn {
-        margin: 1em;
+    .mobile-action-btn {
+       margin-top:20px;
+       line-height: 50px;
 
     }
-
+    .mobile-action-btn>.register-btn{
+        border:1px solid gray;
+        border-radius: 1rem;
+        position:relative;
+    }
+  
     .brand {
         content: var(--brand-logo);
     }
@@ -164,20 +345,12 @@ li>a i{
     .todo-list {
         content: var(--todo)
     }
-
-    
-
     .calendar {
         content: var(--mobile-calender)
     }
-
-    
-
     .reminder {
         content: var(--mobile-reminder)
     }
-
-    
 
     .planning {
         content: var(--mobile-planning)
@@ -186,12 +359,19 @@ li>a i{
     main {
         text-align: center;
         margin-top: 20px;
-
+        display:flex;
+       flex-direction: column;
+       margin:0px;
+       gap:12px
+    }
+    .text-paragraph{
+        margin:5px 0em 12px 0em;
     }
 
     h1 {
         margin-top: 1em;
-        font-weight: var(--Weights-heavy);
+        font-weight: bolder;
+        
     }
 
     .action-btn {
@@ -210,17 +390,20 @@ li>a i{
 
     .hero-banner {
         content: var(--hero-image-mobile);
-        width: 100%;
     }
 
-    .patners {
+    .partners {
         padding: 2em 0px;
         display: grid;
         grid-template-columns: auto auto auto auto;
         align-items: center;
-
-
+        margin:0px
     }
+    .partners>div{
+        width:80px;
+    }
+
+    
 
     .client {
         content: var(--client);
